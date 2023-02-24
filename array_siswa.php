@@ -27,6 +27,8 @@ $ar_nilai = [$ns1,$ns2,$ns3];
             echo '<td>' .$nilai['uts']. '</td>';
             echo '<td>' .$nilai['uas']. '</td>';
             echo '<td>' .$nilai['tugas']. '</td>';
+            $nilai_akhir = ($nilai['uts'] + $nilai['uas'] + $nilai['tugas'])/3;
+            echo '<td>'.number_format($nilai_akhir) .'</td>';
             echo '</tr>';
             $nomor++;
         }
