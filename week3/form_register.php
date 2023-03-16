@@ -168,25 +168,33 @@ if (isset($_POST["submit"])){
                 break;
         }
     }
-}
 
-function predikat ($nilai){
-    if ($nilai > 0 && $nilai < 40){
-        return "Kurang";
-    }elseif ($nilai > 40 && $nilai < 60){
-      return "Cukup";
-    }elseif ($nilai > 60 && $nilai < 100){
-      return "Baik";
-    }elseif ($nilai > 100 && $nilai <= 170){
-      return "Sangat Baik";
+      
+  //tulisakan operator logika
+  function predikat($nilai){
+    if($nilai >= 100 ){
+        return 'Sangat Baik';
+    }elseif($nilai >=60 ){
+        return 'Baik';
+    }elseif($nilai >=40 ){
+        return 'Cukup';
+    }elseif($nilai >=0 ){
+        return 'Kurang';
     }else {
-      return "Tidak Memadai";
+        return 'Tidak Ada Nilai';        
     }
+  }
+
+  $predikat = predikat($nilai);
+
 }
 
-
-$predikat = predikat($nilai);
  ?>
+
+ <!-- <?php
+ 
+ 
+ ?> -->
 
 <div class="container-hasil">
 <?php
