@@ -11,17 +11,6 @@ if (isset($_POST['login'])){
 
 // validasi username dam password
 // username == admin && password == 123
-// if ($_SESSION['username']) {
-// 	header('Location: home.php');
-// 	} else {
-// 	if ($username == "admin" && $password == "12345"){
-// 		$_SESSION['username'] = $username; //set session username
-// 		header('Location: home.php');
-// 		exit();
-// 	}else {
-// 		$error = "Username atau Password Salah";
-// 	}
-// 	}
 
 if ($username == "admin" && $password == "12345"){
     $_SESSION['username'] = $username; //set session username
