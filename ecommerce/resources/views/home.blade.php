@@ -10,7 +10,7 @@
     <style>
       body{
         padding: 20px;
-        font-family: 'Courier New', Courier, monospace;
+        font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
       }
 table, th, td {
   border: 1px solid black;
@@ -67,7 +67,7 @@ th,td{
     </form>
     <br><br>
                 <table style="margin-left:auto;margin-right:auto; overflow: auto;" >
-                    <thead style="text-align:center;">
+                    <thead style="text-align:center; background-color:yellow;">
                         <tr>
                             <th>Jenis Tes</th>
                             <th>Hasil Pemeriksaan</th>
