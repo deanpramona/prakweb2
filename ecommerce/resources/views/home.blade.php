@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
+      body{
+        padding: 20px;
+        font-family: 'Courier New', Courier, monospace;
+      }
 table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
@@ -19,7 +23,6 @@ th,td{
 </style>
   </head>
   <body>
-  <div class="w-75 mt-5 mx-auto p-4 border shadow-sm">
         <h3 style="text-align: center;">Praktikum 8</h3>
         <hr>
     <form>
@@ -100,6 +103,5 @@ th,td{
                     </tr>
                     </tbody>
                 </table>
-</div>
   </body>
 </html>
