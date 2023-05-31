@@ -1,10 +1,14 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FormController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\InputController;
 use App\Http\Controllers\ProdukController;
 use Illuminate\Support\Facades\Route;
+
+
 
 
 
@@ -82,6 +86,6 @@ Route::get('/produk', [ProdukController::class, 'index']);
 
 // ini route untuk frontend atau user
 Route::prefix('frontend')->group(function() {
-    Route::get('/dashboard', [DashboardFrontendController::class, 'index']);
+    Route::get('/dashboard', [FrontendController::class, 'index']);
     Route::get('/about', [AboutController::class, 'index']);
     });
