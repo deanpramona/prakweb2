@@ -19,12 +19,16 @@
             <i class="fas fa-table me-1"></i>
             Data Kategori Produk
         </div>
+        <div class="card-header">
+            <a href="{{url('admin/kategoriproduk/create')}}" class="btn btn-primary">Tambah Kategori Produk</a>
+        </div>
         <div class="card-body">
             <table id="datatablesSimple">
                 <thead>
                     <tr>
                         <th>No</th>
                       <th>Nama</th>
+                      <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -36,6 +40,13 @@
                     <tr>
                         <td>{{ $no }}</td>
                         <td>{{ $katprod->nama }}</td>
+                        <td>
+                            <a href=" {{url('/admin/kategoriproduk/delete/'. $katprod->id)}}">
+                                <button type="button" class="btn btn-danger btn-sn" title="Edit Pelanggan">
+                                <i class="fa-solid fa-pen-to-square fa-beat"></i>
+                                </button>
+                            </a>
+                        </td>
                     </tr>
                     @php
                         $no++

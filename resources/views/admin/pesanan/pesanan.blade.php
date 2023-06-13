@@ -19,6 +19,9 @@
             <i class="fas fa-table me-1"></i>
             Data Pesanan
         </div>
+        <div class="card-header">
+            <a href="{{url('admin/pesanan/create')}}" class="btn btn-primary">Tambah Pesanan</a>
+        </div>
         <div class="card-body">
             <table id="datatablesSimple">
                 <thead>
@@ -32,6 +35,7 @@
                       <th>Jumlah Pesanan</th>
                       <th>Deskripsi</th>
                       <th>Nama Produk</th>
+                      <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +54,19 @@
                         <td>{{ $pes->jumlah_pesanan }}</td>
                         <td>{{ $pes->deskripsi }}</td>
                         <td>{{ $pes->nama_produk}}</td>
+                        <td>
+                            <a href=" {{url('/admin/pesanan/edit/'. $pes->id)}}">
+                                <button type="button" class="btn btn-warning btn-sn" title="Edit Pelanggan">
+                                <i class="fa-solid fa-pen-to-square fa-beat"></i>
+                                </button>
+                            </a>
+                            <a href=" {{url('/admin/pesanan/delete/'. $pes->id)}}">
+                                <button type="button" class="btn btn-danger btn-sn" title="Edit Pelanggan">
+                                <i class="fa-solid fa-pen-to-square fa-beat"></i>
+                                </button>
+                            </a>
+                          
+                        </td>
                     </tr>
                     @php
                         $no++

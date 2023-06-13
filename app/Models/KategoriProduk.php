@@ -11,6 +11,8 @@ class KategoriProduk extends Model
 
     protected $table = 'kategori_produk';
 
+    public $timestamps = false;
+
     protected $primarykey = 'id';
 
     protected $fillable = [

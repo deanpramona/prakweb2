@@ -19,6 +19,9 @@
             <i class="fas fa-table me-1"></i>
             Data Produk
         </div>
+        <div class="card-header">
+            <a href="{{url('admin/produk/create')}}" class="btn btn-primary">Tambah Data</a>
+        </div>
         <div class="card-body">
             <table id="datatablesSimple">
                 <thead>
@@ -32,6 +35,7 @@
                       <th>Minimal Stok</th>
                       <th>Deskripsi</th>
                       <th>Kategori Produk</th>
+                      <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -50,6 +54,20 @@
                         <td>{{ $prod->min_stok }}</td>
                         <td>{{ $prod->deskripsi }}</td>
                         <td>{{ $prod->nama_kategori}}</td>
+                        <td>
+                            <a href=" {{url('/admin/produk/edit/'. $prod->id)}}">
+                                <button type="button" class="btn btn-warning btn-sn" title="Edit Pelanggan">
+                                <i class="fa-solid fa-pen-to-square fa-beat"></i>
+                                </button>
+                            </a>
+                        {{-- </td>
+                        <td> --}}
+                            <a href=" {{url('/admin/produk/delete/'. $prod->id)}}">
+                                <button type="button" class="btn btn-danger btn-sn" title="Edit Pelanggan">
+                                <i class="fa-solid fa-pen-to-square fa-beat"></i>
+                                </button>
+                            </a>
+                        </td>
                     </tr>
                     @php
                         $no++

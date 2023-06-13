@@ -13,6 +13,8 @@ class Pesanan extends Model
     use HasFactory;
     protected $table = 'pesanan';
 
+    public $timestamps = false;
+
     protected $primarykey = 'id';
 
     protected $fillable = [
